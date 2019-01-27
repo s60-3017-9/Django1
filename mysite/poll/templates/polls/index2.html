@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    {% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}"><h1>{{ question.question_text }}</h1></a></li>
+    {% endfor %}
+    </ul>
+    <ul><li><a href="{% url 'polls:delete' %}">delete question</a></li></ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <BODY BGCOLOR="81dbc6" >
+    <h1>{{var1}}</h1>
+    {% for i in var2 %}
+        <h2>{{ i }}</h2>
+        {% if i == "web2" %}
+        <hr/>
+            <h3>hello web2</h3>
+        <hr/>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
